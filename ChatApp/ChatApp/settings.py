@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     # add django channels
     'channels' ,
     'django.contrib.staticfiles',
-
+    'chat'
 ]
 
 MIDDLEWARE = [
