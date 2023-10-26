@@ -1,21 +1,18 @@
-FROM python:3.9-alpine3.13
+FROM python:3.9
+RUN apt-get update;
 
 ENV PYTHONUNBUFFERED 1
+RUN mkdir /ChatApp
 
-COPY ./requirements.txt /tmp/requirements.txt
-COPY ./ChatApp /ChatApp
+ADD requirements.txt /ChatApp
+
 WORKDIR /ChatApp
+
+ADD entrypoint.sh /entrypoint.sh
+RUN chmod a+x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+ADD . /ChatApp
 EXPOSE 8000
-
-RUN apk add --update --no-cache postgresql-client && \
-    apk add --update --no-cache --virtual .tmp-build-deps \
-        build-base postgresql-dev musl-dev && \
-    python -m venv /py && \
-    /py/bin/pip install --upgrade pip && \
-    /py/bin/pip install -r /tmp/requirements.txt && \
-    rm -rf /tmp && \
-    apk del .tmp-build-deps && \
-    adduser -D django-user
-
-ENV PATH="/py/bin:$PATH"
-USER django-user
