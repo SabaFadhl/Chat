@@ -1,15 +1,22 @@
-{%load static%}
-<link href="{%static 'css/style.css' %}" rel="stylesheet" />
+{% load static %}
+
+<!-- Include the stylesheet -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+
 <!DOCTYPE html>
 <html>
 	<body>
+		<!-- Login Section -->
 		<div id="login">
+			<!-- Heading -->
 			<h1>Sign In</h1>
-			<form method ="post">
+
+			<!-- Login Form -->
+			<form method="post">
 				{% csrf_token %}
-				{{form.as_p}}
+				{{ form.as_p }}
 				<br>
-				<button type = "submit">Login</button>
+				<button type="submit">Login</button>
 			</form>
 		</div>
 	</body>
