@@ -1,0 +1,48 @@
+/* style.css */
+
+/* Center the login form */
+#login {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style the heading */
+  #login h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the form inputs */
+  #login form input[type="text"],
+  #login form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style the form button */
+  #login form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style the form button when hovered */
+  #login form button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add some spacing between the form elements */
+  #login form p {
+    margin-bottom: 10px;
+  }

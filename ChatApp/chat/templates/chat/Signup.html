@@ -1,7 +1,7 @@
 {% load static %}
 
 <!-- Include the stylesheet -->
-<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+<link href="{% static 'css/signup.css' %}" rel="stylesheet" />
 
 <!DOCTYPE html>
 <html>
@@ -9,15 +9,14 @@
 		<!-- Login Section -->
 		<div id="login">
 			<!-- Heading -->
-			<h1>Sign In</h1>
+			<h1>Sign Up</h1>
 
 			<!-- Login Form -->
 			<form method="post">
 				{% csrf_token %}
 				{{ form.as_p }}
 				<br>
-				<button type="submit">Login</button>
-				<center> <a href="{% url 'create-user' %}">Create account</a></center>
+				<button type="submit">Create</button>
 			</form>
 		</div>
 	</body>
