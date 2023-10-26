@@ -36,7 +36,12 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    # add django daphne
+    'daphne' ,
+    # add django channels
+    'channels' ,
     'django.contrib.staticfiles',
+
 ]
 
 MIDDLEWARE = [
@@ -123,3 +128,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+ASGI_APPLICATION = 'ChatApp.asgi.application'
+
