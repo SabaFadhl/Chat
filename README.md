@@ -114,13 +114,20 @@ Before getting started, make sure you have the following installed on your syste
 
  1. Open the app http://localhost:8080 
  2.  Click on [Create account](http://localhost:8080/register/)
+    <img width="917" alt="image" src="https://github.com/SabaFadhl/Chat/assets/80360074/f69fb673-a049-4f83-b07d-16ae8ee867eb">
+
  3. Enter Username , Password  and Password confirmation.
 	-   Your password can’t be too similar to your other personal information.
 	-   Your password must contain at least 8 characters.
 	-   Your password can’t be a commonly used password.
 	-   Your password can’t be entirely numeric.
-4. It will redirect to login page enter username and password
-5. **Repeat** the previous operations again in **another** browser .
+   ![image](https://github.com/SabaFadhl/Chat/assets/80360074/359f6b11-64e6-48f7-bd6a-287eee9dcdf5)
+
+5. It will redirect to login page enter username and password
+![image](https://github.com/SabaFadhl/Chat/assets/80360074/4800b040-5e2d-4f31-89aa-7f0357f732c5)
+
+6. **Repeat** the previous operations again in **another** browser .
+![image](https://github.com/SabaFadhl/Chat/assets/80360074/9c82ea43-ad2a-42e6-b972-2d9cc3154c54)
 
 
 Now you can Send real time message and receive it, the user can log out and it will not affect the other user. The other will be still logged in and he can send and receive messages. 
