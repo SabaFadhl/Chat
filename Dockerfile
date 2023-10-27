@@ -1,18 +1,9 @@
-FROM python:3.9
-RUN apt-get update;
+FROM python:3.9-alpine
+WORKDIR /app
+COPY . .
+RUN chmod +x entrypoint.sh
+# RUN chown root entrypoint.sh
 
-ENV PYTHONUNBUFFERED 1
-RUN mkdir /ChatApp
-
-ADD requirements.txt /ChatApp
-
-WORKDIR /ChatApp
-
-ADD entrypoint.sh /entrypoint.sh
-RUN chmod a+x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
-
-RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
-ADD . /ChatApp
 EXPOSE 8000
+ENTRYPOINT ["sh", "entrypoint.sh"]
