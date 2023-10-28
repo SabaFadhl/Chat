@@ -7,7 +7,7 @@ Chat Room has been the most basic step toward creating real-time and live projec
 ## Using docker
 
     docker run --name=chat_app -d -p 8082:80 sabacb/chat_app:alpine0.1
-    docker container run -p 8082:8000 sabacb/chat_app
+    docker container run -p 8082:8000 sabacb/chat_app:alpine0.1
 open [http://127.0.0.1:8082/](http://127.0.0.1:8082)
 ## Running the Django App Locally with venv
 
